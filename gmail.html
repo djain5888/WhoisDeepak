@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Email Threading for Gmail</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #ffdce0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .container {
+            width: 80%;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            border: 5px solid #d93025;
+        }
+        .container:hover {
+            transform: scale(1.03);
+        }
+        h1 {
+            color: #d93025;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+            animation: pulse 2s infinite;
+        }
+        h1::after {
+            content: '\2709';
+            position: absolute;
+            right: -40px;
+            top: 5px;
+            font-size: 36px;
+            color: #d93025;
+            animation: floatIcon 1.5s infinite alternate;
+        }
+        h2, h3 {
+            color: #d93025;
+        }
+        img {
+            width: 80%;
+            height: 80%;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+            margin: 20px auto;
+        }
+        img:hover {
+            transform: scale(1.05);
+        }
+        .section {
+            margin-bottom: 20px;
+            padding: 20px;
+            transition: background 0.3s ease-in-out;
+            border-radius: 10px;
+        }
+        .section:hover {
+            background: #f8f8f8;
+        }
+        .impact, .solution, .conclusion {
+            background: #fff8f8;
+            padding: 20px;
+            border-left: 7px solid #d93025;
+        }
+        .email-simulation {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease-in-out;
+        }
+        .email-simulation:hover {
+            transform: translateY(-5px);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        @keyframes floatIcon {
+            from { transform: translateY(0); }
+            to { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Email Threading for Gmail</h1>
+        
+        <div class="section problem">
+            <h2>1. Problem Statement</h2>
+            <h3>Current Issue:</h3>
+            <p>Users receive multiple emails for the same event (e.g., an Amazon order: Order Confirmation, Shipped, Out for Delivery, Delivered).</p>
+            <p>Important emails get buried under other messages, making it hard to track status updates.</p>
+            <p>Searching for a specific update (e.g., "Where is my package?") takes extra effort.</p>
+            <p>Users must manually search or rely on labels, which isn’t efficient.</p>
+            <h3>User Pain Points:</h3>
+            <ul>
+                <li>Too many emails for the same topic lead to inbox clutter.</li>
+                <li>Difficult to find a specific update among many similar emails.</li>
+                <li>Time-consuming manual searching and filtering.</li>
+            </ul>
+            <img  src="Beforegmail.png" alt="Problem Statement Image">
+        </div>
+
+        <div class="section solution">
+            <h2>2. Solution: Smart Email Threading for Recurring Emails</h2>
+            <h3>Option 1: Expandable Email Threads</h3>
+            <p>Gmail automatically groups related emails from the same sender into a single thread for certain types of emails.</p>
+            <div class="email-simulation">
+                <p>📩 Amazon Order Confirmation</p>
+                <p>📩 Amazon Shipped</p>
+                <p>📩 Amazon Out for Delivery</p>
+                <p>📩 Amazon Delivered</p>
+            </div>
+            <h3>Option 2: Chat-like Interface</h3>
+            <p>Gmail presents updates from the same sender in a chat-like format, similar to a messaging app.</p>
+            <div class="email-simulation">
+                <p>Amazon: Order confirmed! Your items are being prepared for shipment.</p>
+                <p>Amazon: Your package has shipped! Tracking number: [tracking number]</p>
+                <p>Amazon: Your package is out for delivery today!</p>
+                <p>Amazon: Your package has been delivered!</p>
+            </div>
+            <img src="gmailback.png" alt="Solution Section Image">
+        </div>
+
+        <div class="section impact">
+            <h2>3. Impact Metrics</h2>
+            <p>📊 Reduction in search time – Users find updates faster.</p>
+            <p>📊 Lower inbox clutter – Fewer individual emails.</p>
+            <p>📊 Increased user satisfaction – Measured through user feedback & adoption rates.</p>
+            <p>📊 User preference - Track which option (threads or chat) users prefer.</p>
+        </div>
+
+        <div class="section conclusion">
+            <h2>4. Conclusion</h2>
+            <p>Smart Email Threading significantly improves Gmail’s email organization, reducing inbox clutter and providing quicker access to important information.</p>
+        </div>
+    </div>
+</body>
+</html>
